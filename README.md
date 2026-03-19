@@ -33,7 +33,7 @@
 
 ### EC Turbo
 
-- 鲲鹏BoostKit分布式存储EC Turbo特性是针对开源Ceph的EC流程进行优化，降低了数据读写流程中，IO放大比例，整体性能更高。EC Turbo特性性能相对于Ceph开源EC，提升30%以上。
+- 鲲鹏BoostKit分布式存储EC Turbo特性是针对开源Ceph的EC流程进行优化，降低了数据读写流程中，I/O放大比例，整体性能更高。EC Turbo特性性能相对于Ceph开源EC，提升30%以上。
 - [https://gitcode.com/boostkit/ceph](https://gitcode.com/boostkit/ceph)
 
 ### 存储算法加速库
@@ -48,19 +48,19 @@
   - 对比主流开源CRC16算法，4K校验性能提升100%。
 - CRC32校验 
   - 采用鲲鹏优化的CRC32库替代系统标准CRC32校验算法，提升系统性能。
-  - 单个IO消耗CPU的算力减少50%以上，整体收益预计3%。在4KB、8KB、64KB、256KB和1MB块大小情况下，相比ceph_crc32c_sctp性能提升100%，相比ceph_crc32_sctp提升20%。
+  - 单个I/O消耗CPU的算力减少50%以上，整体收益预计3%。在4KB、8KB、64KB、256KB和1MB块大小情况下，相比ceph_crc32c_sctp性能提升100%，相比ceph_crc32_sctp提升20%。
 - \[待开源]
 
 ### 元数据加速
 
 - 鲲鹏BoostKit元数据加速特性是华为自主研发，在RocksDB基础上优化后的存储引擎性能加速特性。
   - RocksDB：
-    RocksDB起源于Facebook，是一款高性能、持久化的嵌入式kv（key value）存储引擎，广泛应用于各种大规模数据存储和处理场景，如互联网服务、分布式系统和数据分析等。元数据加速特性在RocksDB项目的基础上，结合华为自研算法进行了性能加速优化，在使能鲲鹏加速特性时可以获取更佳的性能。主要优化内容包括：深度融合鲲鹏架构优化读写热点、结合业务负载调整后台任务（flush,compaction）、结合数据热点优化缓存逻辑等。
+    RocksDB起源于Facebook，是一款高性能、持久化的嵌入式kv（key value）存储引擎，广泛应用于各种大规模数据存储和处理场景，如互联网服务、分布式系统和数据分析等。元数据加速特性在RocksDB项目的基础上，结合华为自研算法进行了性能加速优化，在使能鲲鹏加速特性时可以获取更佳的性能。主要优化内容包括：深度融合鲲鹏架构优化读写热点、结合业务负载调整后台任务（flush、compaction）、结合数据热点优化缓存逻辑等。
   - [https://gitcode.com/boostkit/rocksdb](https://gitcode.com/boostkit/rocksdb)
 
 ### Ucache智能读缓存
 
-- 鲲鹏BoostKit Ucache智能读缓通过IO智能预取精准识别热点请求，并针对顺序、间隔等IO流进行IO预取，将IO提前载入读缓存。通过LRU算法淘汰冷数据，Ucache读缓存能够提高缓存的IO命中率，提升读性能。
+- 鲲鹏BoostKit Ucache智能读缓通过I/O智能预取精准识别热点请求，并针对顺序、间隔等I/O流进行I/O预取，将I/O提前载入读缓存。通过LRU算法淘汰冷数据，Ucache读缓存能够提高缓存的I/O命中率，提升读性能。
 - [https://gitcode.com/boostkit/ocf](https://gitcode.com/boostkit/ocf)
 
 ### 数据压紧
