@@ -17,19 +17,24 @@
 
 ## 项目介绍<a name="ZH-CN_TOPIC_0000002521071054"></a>
 
-1.1 概述
+**1.1 概述**
 
 鲲鹏BoostKit分布式存储场景（简称鲲鹏BoostKit分布式存储），以鲲鹏硬件平台为底座，依托鲲鹏硬件的自研处理器、网卡、SSD、管理芯片、AI芯片的全方位整体优势，结合开源Ceph分布式存储软件，为客户提供块存储、文件存储、对象存储服务。鲲鹏BoostKit分布式存储总体架构主要由硬件平台、操作系统、中间件、分布式存储软件构成，其中分布式存储软件当前只支持开源Ceph。
 
-1.2 架构图
+**1.2 架构图**
 
 ![](figures/zh-cn_image_0000002465361832.png)
 
-1.3 社区主页
+**1.3 社区主页**
 
 [鲲鹏社区-鲲鹏BoostKit分布式存储场景](https://www.hikunpeng.com/document/detail/zh/kunpengsdss/overview/kunpengsdss.html)。
 
-## 特性介绍<a name="ZH-CN_TOPIC_0000002552151017"></a>
+## 特性介绍
+
+### ISA-L
+
+- ISA-L是开源的高性能存储算法库，在开源基础上，通过使用NEON/SVE指令指令、内存预期等手段进一步纠删码、优化循环冗余检查（CRC）。
+- https://gitcode.com/boostkit/isa-l
 
 ### EC Turbo
 
